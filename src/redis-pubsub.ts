@@ -221,7 +221,8 @@ export class RedisPubSub implements PubSubEngine {
         parsedMessage = message;
       }
     } catch (e) {
-      parsedMessage = message;
+      // parsedMessage = message;
+      return
     }
 
     subscribers.forEach(subId => {
